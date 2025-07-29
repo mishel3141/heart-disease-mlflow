@@ -12,6 +12,9 @@ import mlflow
 import mlflow.sklearn
 from pyngrok import ngrok
 
+from pyngrok import ngrok
+ngrok.set_auth_token("ВАШ ТОКЕН")
+
 # Дані: завантаження з UCI
 heart = fetch_ucirepo(id=45)
 df = pd.concat([heart.data.features, heart.data.targets], axis=1)
